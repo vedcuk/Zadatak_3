@@ -1,23 +1,38 @@
-public class Trokut {
-    double a;
-    double b;
-    double c;
+   public class Trokut extends GeometrijskiLik {
 
-    Trokut(double a, double b, double c){
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
+       double a;
+       double b;
+       double c;
 
-    public double getA() {
-        return this.a;
-    }
 
-    public double getB() {
-        return this.b;
-    }
+       Trokut(String naziv, double a, double b, double c) {
+           super(naziv);
+           this.a = a;
+           this.b = b;
+           this.c = c;
+       }
 
-    public double getC() {
-        return this.c;
-    }
-}
+       public double getA() {
+           return this.a;
+       }
+
+       public double getB() {
+           return this.b;
+       }
+
+       public double getC() {
+           return this.c;
+       }
+
+       @Override
+       public double povrsina(){
+           double s = (a + b + c) / 2.0;
+           return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+       }
+
+       @Override
+       public double opseg(){
+           return a + b + c;
+       }
+
+   }

@@ -1,8 +1,11 @@
-public class Pravokutnik {
+public class Pravokutnik extends GeometrijskiLik {
+
     double a;
     double b;
 
-    Pravokutnik(double a, double b){
+
+    Pravokutnik(String naziv, double a, double b) {
+        super(naziv);
         this.a = a;
         this.b = b;
     }
@@ -14,4 +17,15 @@ public class Pravokutnik {
     public double getB() {
         return this.b;
     }
+
+    @Override
+    public double povrsina(){
+        return a * b;
+    }
+
+    @Override
+    public double opseg(){
+        return 2 * (a + b);
+    }
 }
+
