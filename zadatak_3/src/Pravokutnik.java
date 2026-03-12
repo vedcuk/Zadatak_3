@@ -6,6 +6,9 @@ public class Pravokutnik extends GeometrijskiLik {
 
     Pravokutnik(String naziv, double a, double b) {
         super(naziv);
+        if (a <= 0 || b <= 0) {
+            throw new IllegalArgumentException("Stranice moraju biti > 0");
+        }
         this.a = a;
         this.b = b;
     }

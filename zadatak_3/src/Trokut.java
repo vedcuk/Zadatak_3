@@ -7,6 +7,13 @@
 
        Trokut(String naziv, double a, double b, double c) {
            super(naziv);
+           if (a <= 0 || b <= 0 || c <= 0) {
+               throw new IllegalArgumentException("Stranice moraju biti > 0");
+           }
+
+           if (a + b <= c || a + c <= b || b + c <= a) {
+               throw new IllegalArgumentException("Ne postoji trokut s tim stranicama");
+           }
            this.a = a;
            this.b = b;
            this.c = c;

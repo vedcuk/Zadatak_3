@@ -5,23 +5,20 @@ public class Main {
         Pravokutnik pravokutnik = new Pravokutnik("pravokutnik",4,5);
         Krug krug = new Krug( "krug",3);
 
+        Ucilica ucilica = new Ucilica();
+
+        ucilica.dodaj(new Krug("Krug2", 6));
+        ucilica.dodaj(new Krug("Krug3",2));
+        ucilica.dodaj(new Pravokutnik ("Prav2", 5,9));
+        ucilica.dodaj(new Trokut("Trok2", 2,5,6));
+
+        ucilica.ispisiSve();
+        ucilica.sortirajPoPovrsini();
+
+        System.out.println("Sortirano po površini: \n");
+        ucilica.ispisiSve();
 
 
-        System.out.println(trokut.getA());
-        System.out.println(trokut.getB());
-        System.out.println(trokut.getC());
-        System.out.println(pravokutnik.getA());
-        System.out.println(pravokutnik.getB());
-        System.out.println(krug.getR());
-        System.out.println(trokut.getNaziv());
-        System.out.println(pravokutnik.getNaziv());
-        System.out.println(krug.getNaziv());
-        System.out.println(krug.opseg());
-        System.out.println(krug.povrsina());
-        System.out.println(trokut.opseg());
-        System.out.println(trokut.povrsina());
-        System.out.println(pravokutnik.opseg());
-        System.out.println(pravokutnik.povrsina());
 
 
     }
